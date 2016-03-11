@@ -1,0 +1,26 @@
+<configuration debug="true">
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %5p %50.50c{50}:%4L - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>apex-security.log</file>
+		<append>true</append>
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springsource.restbucks" level="error" />
+	<logger name="org.springframework" level="error" />
+
+	<root level="ERROR">
+		<appender-ref ref="console" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
