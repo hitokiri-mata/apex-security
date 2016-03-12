@@ -5,6 +5,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
+import org.springframework.stereotype.Component;
 
 import com.apex.web.security.domain.Role;
 import com.apex.web.security.rest.controller.RoleController;
@@ -14,11 +15,12 @@ import com.apex.web.security.rest.controller.RoleController;
  * @author hitokiri
  *
  */
+@Component
 public class RoleResourceAssembler
 	implements ResourceAssembler<Role, Resource<Role>> {
 
     public static class RoleLinks {
-	public static final String ROLE = "/role";
+	public static final String ROLES = "/roles";
     }
 
     /*
@@ -29,11 +31,9 @@ public class RoleResourceAssembler
      */
     @Override
     public Resource<Role> toResource(Role role) {
-	Resource<Role> resource = new Resource<>(role);
-	resource.add(
+	return new Resource<Role>(role,
 		linkTo(methodOn(RoleController.class).getById(role.getId()))
 			.withSelfRel());
-	return resource;
     }
 
 }

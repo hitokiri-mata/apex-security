@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * 
@@ -32,6 +33,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
+@ToString(exclude = { "accounts", "permissions" })
 public class Role extends AbstractEntity implements GrantedAuthority {
 
     public static enum Permission {
@@ -44,6 +46,7 @@ public class Role extends AbstractEntity implements GrantedAuthority {
     private static final long serialVersionUID = 1L;
     private String name;
     private String description;
+
     @ElementCollection(targetClass = Permission.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "role_permission")
@@ -55,8 +58,8 @@ public class Role extends AbstractEntity implements GrantedAuthority {
      */
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "role_account", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
-    private List<Account> account;
+    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
+    private List<Account> accounts;
 
     /*
      * (non-Javadoc)
@@ -64,6 +67,7 @@ public class Role extends AbstractEntity implements GrantedAuthority {
      * @see org.springframework.security.core.GrantedAuthority#getAuthority()
      */
     @Override
+    @JsonIgnore
     public String getAuthority() {
 	return name;
     }

@@ -32,6 +32,6 @@ public interface AccountRepository
      * @param ticket
      * @return
      */
-    Account findBySessionTicket(String ticket);
+    Account findBySessionsTicket(String ticket);
 
 }

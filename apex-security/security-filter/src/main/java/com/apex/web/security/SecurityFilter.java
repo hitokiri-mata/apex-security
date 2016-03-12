@@ -5,7 +5,6 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -21,8 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 public class SecurityFilter implements Filter {
     public static final String CROSS_SITE_REQUEST_FORGERY_TOKEN = "XSRF-TOKEN";
 
-    private ServletContext servletContext;
-
     /*
      * (non-Javadoc)
      * 
@@ -30,7 +27,7 @@ public class SecurityFilter implements Filter {
      */
     @Override
     public void init(FilterConfig config) throws ServletException {
-	this.servletContext = config.getServletContext();
+	config.getServletContext();
     }
 
     /*
@@ -50,6 +47,7 @@ public class SecurityFilter implements Filter {
      * @see javax.servlet.Filter#doFilter(javax.servlet.ServletRequest,
      * javax.servlet.ServletResponse, javax.servlet.FilterChain)
      */
+    @SuppressWarnings("unused")
     @Override
     public void doFilter(ServletRequest servletRequest,
 	    ServletResponse servletResponse, FilterChain filterChain)

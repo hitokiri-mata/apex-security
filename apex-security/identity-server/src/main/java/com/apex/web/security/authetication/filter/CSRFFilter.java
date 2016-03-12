@@ -80,7 +80,7 @@ public class CSRFFilter extends OncePerRequestFilter {
 		session.setRemoteIPAddress(request.getRemoteAddr());
 		session.setStartTime(new Date());
 		session.setAccount(account);
-		account.getSession().add(session);
+		account.getSessions().add(session);
 		accountService.saveOrUpdate(account);
 		log.debug("creating a security ticket '" + token
 			+ "' for account '"
@@ -109,7 +109,7 @@ public class CSRFFilter extends OncePerRequestFilter {
      */
     private boolean isSessionAssociateWithAccount(Account account,
 	    String securityTicket) {
-	for (Session session : account.getSession()) {
+	for (Session session : account.getSessions()) {
 	    if (StringUtils.equals(session.getTicket(), securityTicket)) {
 		return true;
 	    }

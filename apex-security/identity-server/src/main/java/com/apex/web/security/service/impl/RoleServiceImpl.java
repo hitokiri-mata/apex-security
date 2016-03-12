@@ -1,10 +1,10 @@
 package com.apex.web.security.service.impl;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.apex.web.security.domain.Role;
@@ -28,8 +28,8 @@ public class RoleServiceImpl implements RoleService {
      * String)
      */
     @Override
-    public List<Role> getByPrincipal(String name) {
-	return roleRepository.findByAccountCredentialUsername(name);
+    public Page<Role> getByPrincipal(String name, Pageable pageable) {
+	return roleRepository.findByAccountsCredentialUsername(name,pageable);
     }
 
     /*
@@ -42,4 +42,14 @@ public class RoleServiceImpl implements RoleService {
 	return roleRepository.findOne(id);
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.apex.web.security.service.RoleService#getAll(org.springframework.data
+     * .domain.Pageable)
+     */
+    public Page<Role> getAll(Pageable pageable) {
+	return roleRepository.findAll(pageable);
+    }
 }

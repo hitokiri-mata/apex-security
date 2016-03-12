@@ -52,7 +52,7 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public Account getBySecurityTicket(String ticket) {
-	return accountRepository.findBySessionTicket(ticket);
+	return accountRepository.findBySessionsTicket(ticket);
     }
 
 }

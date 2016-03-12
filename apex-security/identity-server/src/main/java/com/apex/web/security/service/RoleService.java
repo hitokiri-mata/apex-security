@@ -1,12 +1,15 @@
 package com.apex.web.security.service;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import com.apex.web.security.domain.Role;
 
 public interface RoleService {
 
-    List<Role> getByPrincipal(String name);
+    Page<Role> getAll(Pageable pageable);
+
+    Page<Role> getByPrincipal(String name, Pageable pageable);
 
     Role getById(Long id);
 

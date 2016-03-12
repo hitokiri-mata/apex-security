@@ -33,6 +33,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * 
@@ -43,6 +44,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
+@ToString(exclude = { "roles", "sessions" })
 public class Account extends AbstractEntity {
 
     @OneToOne(cascade = { PERSIST, MERGE })
@@ -59,7 +61,9 @@ public class Account extends AbstractEntity {
      * 
      */
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
+    @JoinTable(name = "account_role", 
+    joinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) , 
+    inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
     @NotNull(message = "user.role.null")
     private List<Role> roles;
 
@@ -67,7 +71,7 @@ public class Account extends AbstractEntity {
      * 
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Session> session = new ArrayList<>();
+    private List<Session> sessions = new ArrayList<>();
 
     /**
      * 
@@ -76,9 +80,13 @@ public class Account extends AbstractEntity {
     @Type(type = "org.hibernate.type.BooleanType")
     private boolean active;
 
+    /**
+     * 
+     * @return
+     */
     public Session getActiveSession() {
-	if (this.getSession() != null) {
-	    for (Session session : this.getSession()) {
+	if (this.getSessions() != null) {
+	    for (Session session : this.getSessions()) {
 		if (session.getEndTime() == null) {
 		    return session;
 		}

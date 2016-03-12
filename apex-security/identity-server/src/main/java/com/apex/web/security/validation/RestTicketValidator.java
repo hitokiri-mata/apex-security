@@ -11,13 +11,12 @@ import com.apex.web.security.exception.NonActiveAccountException;
 import com.apex.web.security.service.AccountService;
 
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor(onConstructor = @__(@Autowired) )
-public class RestTicketValidator implements TestTicketValidator {
+public class RestTicketValidator implements TicketValidator {
+
     private @Autowired HttpServletRequest request;
-    private final @NonNull MessageSource messages;
-    private final @NonNull AccountService accountService;
+    private @NonNull MessageSource messages;
+    private @NonNull AccountService accountService;
 
     /*
      * (non-Javadoc)
@@ -25,7 +24,6 @@ public class RestTicketValidator implements TestTicketValidator {
      * @see com.apex.web.security.validation.TicketValidator#validate(java.lang.
      * String)
      */
-    @Override
     public void validate(String ticket) {
 	// getting user account by security ticket.
 	Account account = accountService.getBySecurityTicket(ticket);
@@ -36,14 +34,6 @@ public class RestTicketValidator implements TestTicketValidator {
 		.getActiveSession() == null : new SessionAuthenticationException(
 			"");
 	System.out.println("-->>  -->> -->> " + request.getRemoteAddr());
-	// validating if
-	/*
-	 * assert account.getActiveSession() .getEndTime() != null : new
-	 * SessionAuthenticationException( messages.getMessage(
-	 * "DigestAuthenticationFilter.usernameNotFound", new Object[] { "" },
-	 * LocaleContextHolder.getLocale()));
-	 */
-	//
-    }
 
+    }
 }
