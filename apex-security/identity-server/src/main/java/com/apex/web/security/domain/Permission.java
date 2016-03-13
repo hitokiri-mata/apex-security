@@ -23,13 +23,11 @@ import lombok.EqualsAndHashCode;
 public class Permission extends AbstractEntity {
 
     private String value;
-    private String description; 
-    
+    private String description;
+
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "role_permission", 
-    	joinColumns = @JoinColumn(name = "permission_id", referencedColumnName = ID_PROPERTY_NAME) , 
-    	inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
+    @JoinTable(name = "role_permission", joinColumns = @JoinColumn(name = "permission_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
     private List<Role> roles = new ArrayList<>();
 
     public Permission() {

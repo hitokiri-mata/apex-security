@@ -5,9 +5,11 @@ com/apex/web/security/service/AccountService.class
 com/apex/web/security/domain/Person$PhoneType.class
 com/apex/web/security/resource/AccountResourceAssembler$AccountResource.class
 com/apex/web/security/service/impl/SessionServiceImpl.class
+com/apex/web/security/service/impl/PermissionServiceImpl.class
 com/apex/web/security/rest/controller/AccountController.class
 com/apex/web/security/domain/Session$Agent.class
 com/apex/web/security/domain/AbstractEntity.class
+com/apex/web/security/resource/PermissionResourceAssembler.class
 com/apex/web/security/resource/AccountResourceAssembler$AccountResource$AccountLinks.class
 com/apex/web/security/domain/Session.class
 com/apex/web/security/validation/RemoteIPAddressChecker.class
@@ -16,6 +18,7 @@ com/apex/web/security/Application$MvcConfig.class
 com/apex/web/security/resource/AccountResourceAssembler.class
 com/apex/web/security/service/SessionService.class
 com/apex/web/security/validation/TicketValidator.class
+com/apex/web/security/domain/repository/PermissionRepository.class
 com/apex/web/security/domain/Person$Address.class
 com/apex/web/security/domain/repository/SessionRepository.class
 com/apex/web/security/rest/controller/RoleController.class
@@ -25,6 +28,7 @@ com/apex/web/security/service/impl/HttpLogiServiceImpl.class
 com/apex/web/security/authetication/LogiAnalyticSecurityKeyHandler.class
 com/apex/web/security/domain/Account.class
 com/apex/web/security/domain/Permission.class
+com/apex/web/security/rest/controller/PermissionController.class
 com/apex/web/security/service/impl/JpaUserDetailService.class
 com/apex/web/security/service/RoleService.class
 com/apex/web/security/authetication/SuccessLogoutHandler.class
@@ -33,7 +37,9 @@ com/apex/web/security/service/impl/RoleServiceImpl.class
 com/apex/web/security/domain/Person$Gender.class
 com/apex/web/security/domain/Role.class
 com/apex/web/security/domain/repository/AccountRepository.class
+com/apex/web/security/service/PermissionService.class
 com/apex/web/security/Constants.class
+com/apex/web/security/resource/PermissionResourceAssembler$RoleLinks.class
 com/apex/web/security/resource/TicketValidator.class
 com/apex/web/security/service/LogiService.class
 com/apex/web/security/resource/RoleResourceAssembler.class

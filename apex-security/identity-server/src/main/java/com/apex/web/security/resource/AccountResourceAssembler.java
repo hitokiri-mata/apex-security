@@ -1,39 +1,19 @@
 package com.apex.web.security.resource;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
+import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
-import org.springframework.hateoas.ResourceSupport;
 
 import com.apex.web.security.domain.Account;
-import com.apex.web.security.domain.Person;
-import com.apex.web.security.resource.AccountResourceAssembler.AccountResource;
-
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import com.apex.web.security.rest.controller.AccountController;
 
 public class AccountResourceAssembler
-	implements ResourceAssembler<Account, AccountResource> {
+	implements ResourceAssembler<Account, Resource<Account>> {
 
-    @Data
-    @EqualsAndHashCode(callSuper = true)
-    public static class AccountResource extends ResourceSupport {
-	private String principal;
-	private Person person;
-	private boolean active;
-
-	public static class AccountLinks {
-	    public static final String ACCOUNTS = "/account";
-	}
-
-	/**
-	 * 
-	 * @param account
-	 */
-	public AccountResource(Account account) {
-	    this.person = account.getPerson();
-	    this.principal = account.getCredential().getUsername();
-	    this.active = account.isActive();
-	}
-
+    public static class AccountLinks {
+	public static final String ACCOUNTS = "/account";
     }
 
     /*
@@ -43,11 +23,10 @@ public class AccountResourceAssembler
      * Object)
      */
     @Override
-    public AccountResource toResource(Account account) {
-	AccountResource resource = new AccountResource(account);
-//	resource.add(linkTo(methodOn(RoleController.class)
-//		.getByPrincipal(account.getCredential().getUsername()))
-//			.withRel("roles"));
-	return resource;
+    public Resource<Account> toResource(Account account) {
+	return new Resource<Account>(account,
+		linkTo(methodOn(AccountController.class)
+			.getByPrincipal(account.getCredential().getUsername()))
+				.withSelfRel());
     }
 }

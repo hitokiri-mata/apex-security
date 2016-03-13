@@ -68,7 +68,7 @@ public class CSRFFilter extends OncePerRequestFilter {
 	    // application
 	    if (authentication != null && authentication.isAuthenticated()) {
 		account = accountService
-			.getByUsername(authentication.getName());
+			.getByPrincipal(authentication.getName());
 	    }
 	    // creating a new durable session informaction for the current user.
 	    if (account != null

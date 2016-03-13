@@ -5,6 +5,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
+import org.springframework.stereotype.Component;
 
 import com.apex.web.security.domain.Permission;
 import com.apex.web.security.rest.controller.PermissionController;
@@ -14,6 +15,7 @@ import com.apex.web.security.rest.controller.PermissionController;
  * @author hitokiri
  *
  */
+@Component
 public class PermissionResourceAssembler
 	implements ResourceAssembler<Permission, Resource<Permission>> {
 

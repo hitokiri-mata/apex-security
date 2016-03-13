@@ -1,5 +1,6 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/SessionRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/AccountServiceImpl.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/PermissionResourceAssembler.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/SessionService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/RoleServiceImpl.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Role.java
@@ -16,6 +17,7 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Session.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/AccountController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Account.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/PermissionService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/Application.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/RoleService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/message/Type.java
@@ -27,8 +29,11 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/authetication/JPAAuthenticationProvider.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/exception/LogiServiceException.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/RoleResourceAssembler.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/PermissionController.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/PermissionServiceImpl.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/HttpLogiServiceImpl.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/SessionServiceImpl.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/PermissionRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/exception/NonActiveAccountException.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/RoleRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/AccountService.java

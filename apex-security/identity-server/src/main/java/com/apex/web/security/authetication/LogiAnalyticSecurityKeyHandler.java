@@ -66,7 +66,7 @@ public class LogiAnalyticSecurityKeyHandler
 	Cookie cookie = WebUtils.getCookie(request, LOGI_SECRETE_KEY);
 	// validate if user is authenticate
 	if (authentication != null && authentication.isAuthenticated()) {
-	    account = accountService.getByUsername(authentication.getName());
+	    account = accountService.getByPrincipal(authentication.getName());
 	}
 	// extracting the current roles and right
 	List<String> roles = new ArrayList<>();

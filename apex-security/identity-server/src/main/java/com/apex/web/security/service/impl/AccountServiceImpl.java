@@ -39,7 +39,7 @@ public class AccountServiceImpl implements AccountService {
      * String)
      */
     @Override
-    public Account getByUsername(String username) {
+    public Account getByPrincipal(String username) {
 	return accountRepository.findByCredentialUsername(username);
     }
 

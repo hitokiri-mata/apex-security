@@ -40,9 +40,7 @@ public class Role extends AbstractEntity implements GrantedAuthority {
 
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "role_permission", 
-    	joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , 
-    	inverseJoinColumns = @JoinColumn(name = "permission_id", referencedColumnName = ID_PROPERTY_NAME) )
+    @JoinTable(name = "role_permission", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "permission_id", referencedColumnName = ID_PROPERTY_NAME) )
     private List<Permission> permissions = new ArrayList<>();
 
     /**
@@ -50,9 +48,7 @@ public class Role extends AbstractEntity implements GrantedAuthority {
      */
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "role_account", 
-    	joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , 
-    	inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
+    @JoinTable(name = "role_account", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
     private List<Account> accounts = new ArrayList<>();
 
     /*

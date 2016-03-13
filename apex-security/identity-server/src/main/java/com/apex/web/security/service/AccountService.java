@@ -6,7 +6,7 @@ public interface AccountService {
 
     Account saveOrUpdate(Account user);
 
-    Account getByUsername(String username);
+    Account getByPrincipal(String username);
 
     Account getBySecurityTicket(String ticket);
 

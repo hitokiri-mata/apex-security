@@ -29,7 +29,7 @@ public class RoleServiceImpl implements RoleService {
      */
     @Override
     public Page<Role> getByPrincipal(String name, Pageable pageable) {
-	return roleRepository.findByAccountsCredentialUsername(name,pageable);
+	return roleRepository.findByAccountsCredentialUsername(name, pageable);
     }
 
     /*
