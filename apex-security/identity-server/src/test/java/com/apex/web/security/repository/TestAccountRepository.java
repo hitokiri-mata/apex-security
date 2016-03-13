@@ -11,14 +11,14 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.apex.web.security.domain.Account;
-import com.apex.web.security.domain.Person;
-import com.apex.web.security.domain.Role;
 import com.apex.web.security.domain.Account.Credential;
+import com.apex.web.security.domain.Permission;
+import com.apex.web.security.domain.Person;
 import com.apex.web.security.domain.Person.Address;
 import com.apex.web.security.domain.Person.Gender;
 import com.apex.web.security.domain.Person.Phone;
 import com.apex.web.security.domain.Person.PhoneType;
-import com.apex.web.security.domain.Role.Permission;
+import com.apex.web.security.domain.Role;
 import com.apex.web.security.domain.repository.AccountRepository;
 
 /**
@@ -83,13 +83,11 @@ public class TestAccountRepository extends AbstractIntegrationTest {
 	role.setName("Administrator");
 	role.setDescription("Superpowerful user in the system ");
 	//
-	List<Permission> permissions = new ArrayList<>();
-	permissions.add(Permission.WRITE);
-	permissions.add(Permission.READ);
-	permissions.add(Permission.DELETE);
-	permissions.add(Permission.EDIT);
+	role.getPermissions().add(new Permission("write"));
+	role.getPermissions().add(new Permission("read"));
+	role.getPermissions().add(new Permission("update"));
+	role.getPermissions().add(new Permission("delete"));
 	//
-	role.setPermissions(permissions);
 	roles.add(role);
 	//
 	Account account = new Account();

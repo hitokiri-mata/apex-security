@@ -61,7 +61,7 @@ public class Account extends AbstractEntity {
      * 
      */
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "account_role", 
+    @JoinTable(name = "role_account", 
     joinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) , 
     inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
     @NotNull(message = "user.role.null")

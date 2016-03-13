@@ -2,15 +2,11 @@ package com.apex.web.security.domain;
 
 import static com.apex.web.security.Constants.ID_PROPERTY_NAME;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -35,11 +31,6 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = false)
 @ToString(exclude = { "accounts", "permissions" })
 public class Role extends AbstractEntity implements GrantedAuthority {
-
-    public static enum Permission {
-	WRITE, READ, DELETE, EDIT
-    }
-
     /**
      * 
      */
@@ -47,19 +38,22 @@ public class Role extends AbstractEntity implements GrantedAuthority {
     private String name;
     private String description;
 
-    @ElementCollection(targetClass = Permission.class, fetch = FetchType.EAGER)
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "role_permission")
-    @Column(name = "permission")
-    private List<Permission> permissions;
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "role_permission", 
+    	joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , 
+    	inverseJoinColumns = @JoinColumn(name = "permission_id", referencedColumnName = ID_PROPERTY_NAME) )
+    private List<Permission> permissions = new ArrayList<>();
 
     /**
      * 
      */
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
-    private List<Account> accounts;
+    @JoinTable(name = "role_account", 
+    	joinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) , 
+    	inverseJoinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) )
+    private List<Account> accounts = new ArrayList<>();
 
     /*
      * (non-Javadoc)

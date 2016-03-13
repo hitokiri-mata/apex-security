@@ -24,6 +24,7 @@ com/apex/web/security/domain/repository/RoleRepository.class
 com/apex/web/security/service/impl/HttpLogiServiceImpl.class
 com/apex/web/security/authetication/LogiAnalyticSecurityKeyHandler.class
 com/apex/web/security/domain/Account.class
+com/apex/web/security/domain/Permission.class
 com/apex/web/security/service/impl/JpaUserDetailService.class
 com/apex/web/security/service/RoleService.class
 com/apex/web/security/authetication/SuccessLogoutHandler.class
@@ -45,6 +46,5 @@ com/apex/web/security/message/DefaultErrorMessage.class
 com/apex/web/security/validation/RestTicketValidator.class
 com/apex/web/security/exception/NonActiveAccountException.class
 com/apex/web/security/authetication/JPAAuthenticationProvider.class
-com/apex/web/security/domain/Role$Permission.class
 com/apex/web/security/authetication/filter/CSRFFilter.class
 com/apex/web/security/rest/controller/UiApplication.class

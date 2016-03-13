@@ -5,6 +5,7 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Role.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/message/DefaultErrorMessage.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/authetication/SessionTimeOutCheckerJob.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Permission.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/UiApplication.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/AbstractEntity.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/authetication/LogiAnalyticSecurityKeyHandler.java
