@@ -6,6 +6,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,7 +38,7 @@ public class AccountController {
      * @param ticket
      * @return
      */
-    @RequestMapping(path = "/{principal}", method = GET)
+    @RequestMapping(path = "/{principal}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<?> getByPrincipal(
 	    @PathVariable("principal") String principal) {
 	return ResponseEntity.ok(new AccountResourceAssembler()
@@ -49,7 +50,7 @@ public class AccountController {
      * @param ticket
      * @return
      */
-    @RequestMapping(path = "/ticket/{ticket}", method = GET)
+    @RequestMapping(path = "/ticket/{ticket}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<?> getAccountByToken(
 	    @PathVariable("ticket") String ticket) {
 	return ResponseEntity.ok(new AccountResourceAssembler()

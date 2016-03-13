@@ -21,9 +21,7 @@ import com.apex.web.security.service.RoleService;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Controller
 @RequestMapping(ROLES)
 @ExposesResourceFor(Role.class)
@@ -67,8 +65,6 @@ public class RoleController {
 	    @PathVariable("username") String username,
 	    @PageableDefault Pageable pageable,
 	    PagedResourcesAssembler<Role> pagedResourceAssembler) {
-	log.debug("getting the system roles asigned to principal '" + username
-		+ "'");
 	return ResponseEntity.ok(pagedResourceAssembler.toResource(
 		roleService.getByPrincipal(username, pageable),
 		roleResourceAssembler));

@@ -3,6 +3,8 @@ package com.apex.web.security.domain.repository;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.apex.web.security.domain.Session;
@@ -22,5 +24,8 @@ public interface SessionRepository
     List<Session> findByLastRequestBeforeAndEndTimeIsNull(Date date);
 
     Session findByTicket(String ticket);
+
+    Page<Session> findByAccountCredentialUsername(String username,
+	    Pageable pageable);
 
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.apex.web.security.domain.Session;
@@ -60,6 +62,29 @@ public class SessionServiceImpl implements SessionService {
     @Override
     public Session saveOrUpdate(Session session) {
 	return sessionRepository.save(session);
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.apex.web.security.service.SessionService#getByPrincipal(java.lang.
+     * String, org.springframework.data.domain.Pageable)
+     */
+    @Override
+    public Page<Session> getByPrincipal(String principal, Pageable pageable) {
+	return sessionRepository.findByAccountCredentialUsername(principal,
+		pageable);
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.apex.web.security.service.SessionService#getById(java.lang.Long)
+     */
+    @Override
+    public Session getById(Long id) {
+	return sessionRepository.findOne(id);
     }
 
 }

@@ -14336,3 +14336,724 @@ org.springframework.security.access.AccessDeniedException: Access is denied
 270882 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
 270883 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
 270883 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+10614 [localhost-startStop-1] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$$EnhancerBySpringCGLIB$$8763b1b9@4fc1dcb0}
+10715 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+10717 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+10717 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+10717 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+10839 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login?error']
+10841 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+10841 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+10842 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/logout']
+10842 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/']
+10843 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/home']
+10843 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+10857 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+10859 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+10875 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@390cccb0, org.springframework.security.web.context.SecurityContextPersistenceFilter@30928c72, org.springframework.security.web.header.HeaderWriterFilter@1ed7479d, org.springframework.security.web.csrf.CsrfFilter@32b70492, com.apex.web.security.authetication.filter.CSRFFilter@41f6b84f, org.springframework.security.web.authentication.logout.LogoutFilter@50d026d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@140f40cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a47f8ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c40a0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42ec0ad, org.springframework.security.web.session.SessionManagementFilter@369c9039, org.springframework.security.web.access.ExceptionTranslationFilter@5a534705, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@95c6d44]
+10894 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+10897 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+10897 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+10898 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61ca4d47, org.springframework.security.web.context.SecurityContextPersistenceFilter@1bdfb0dd, org.springframework.security.web.header.HeaderWriterFilter@79b98ab8, org.springframework.security.web.authentication.logout.LogoutFilter@d3b579f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b8447bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ec608bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9fad95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c3d7c27, org.springframework.security.web.session.SessionManagementFilter@70eacd14, org.springframework.security.web.access.ExceptionTranslationFilter@fa157be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d9e5ea3]
+1038225 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/**/favicon.ico'
+1038230 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/js/**'
+1038231 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/css/**'
+1038231 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/error'
+1038235 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1038236 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1038238 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+1038239 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+1038242 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1038243 [http-nio-9000-exec-1] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1038244 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1038246 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1038267 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1038267 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1038268 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1038269 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /roles/principal/cmata' doesn't match 'POST /login
+1038269 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1038270 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1038275 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1038278 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6fa8940c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: ROLE_ANONYMOUS'
+1038278 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1038279 [http-nio-9000-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID E9B6ADE71694E0D2CD7FA825262338EC is invalid.
+1038280 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1038280 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1038284 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1038285 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/'
+1038286 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/home'
+1038287 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /roles/principal/cmata; Attributes: [authenticated]
+1038288 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6fa8940c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: ROLE_ANONYMOUS
+1038301 [http-nio-9000-exec-1] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: -1
+1038326 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Access is denied (user is anonymous); redirecting to authentication entry point
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:83) ~[spring-security-core-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:232) ~[spring-security-core-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:123) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:122) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:48) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:205) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:120) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at com.apex.web.security.authetication.filter.CSRFFilter.doFilterInternal(CSRFFilter.java:97) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:96) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:53) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+1038328 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using Ant [pattern='/**', GET]
+1038329 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request '/roles/principal/cmata' matched by universal pattern '/**'
+1038329 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=Ant [pattern='/**/favicon.ico']]
+1038330 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/**/favicon.ico'
+1038331 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1038332 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@366c1064, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[*/*]]]
+1038339 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - httpRequestMediaTypes=[text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8]
+1038339 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing text/html
+1038340 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith text/html = false
+1038340 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing application/xhtml+xml
+1038341 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith application/xhtml+xml = false
+1038341 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing image/webp
+1038342 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith image/webp = false
+1038342 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing application/xml;q=0.9
+1038343 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith application/xml;q=0.9 = false
+1038344 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing */*;q=0.8
+1038344 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Ignoring
+1038345 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Did not match any media types
+1038345 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1038346 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]]
+1038346 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1038347 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - All requestMatchers returned true
+1038389 [http-nio-9000-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - DefaultSavedRequest added to Session: DefaultSavedRequest[http://localhost:9000/roles/principal/cmata]
+1038390 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Calling Authentication entry point.
+1038392 [http-nio-9000-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to 'http://localhost:9000/login'
+1038392 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+1038393 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1038453 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/**/favicon.ico'
+1038454 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/js/**'
+1038454 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/css/**'
+1038455 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/error'
+1038456 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1038456 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1038457 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - HttpSession returned null object for SPRING_SECURITY_CONTEXT
+1038457 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@4f855552. A new one will be created.
+1038457 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1038458 [http-nio-9000-exec-2] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1038458 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1038459 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1038459 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1038462 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+1038463 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1038464 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /login' doesn't match 'POST /login
+1038465 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1038465 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - pathInfo: both null (property equals)
+1038466 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - queryString: both null (property equals)
+1038466 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURI: arg1=/roles/principal/cmata; arg2=/login (property not equals)
+1038466 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+1038467 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1038467 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1038468 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6fa8940c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: ROLE_ANONYMOUS'
+1038469 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1038469 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1038470 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1038471 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /login; Attributes: [permitAll]
+1038472 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6fa8940c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: ROLE_ANONYMOUS
+1038476 [http-nio-9000-exec-2] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1038477 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1038477 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1038479 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login reached end of additional filter chain; proceeding with original chain
+1039199 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1039200 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+1039200 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1045429 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/**/favicon.ico'
+1045430 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/js/**'
+1045431 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/css/**'
+1045431 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/error'
+1045432 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1045433 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1045433 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - HttpSession returned null object for SPRING_SECURITY_CONTEXT
+1045434 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@4f855552. A new one will be created.
+1045434 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1045435 [http-nio-9000-exec-3] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1045435 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1045436 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1045437 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1045438 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+1045438 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1045439 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+1045440 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+1045441 [http-nio-9000-exec-3] DEBUG o.s.s.a.ProviderManager - Authentication attempt using com.apex.web.security.authetication.JPAAuthenticationProvider
+1045692 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.s.CompositeSessionAuthenticationStrategy - Delegating to org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy@41e4d700
+1045697 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.s.CompositeSessionAuthenticationStrategy - Delegating to org.springframework.security.web.csrf.CsrfAuthenticationStrategy@7d175a4a
+1045699 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Authentication success. Updating SecurityContextHolder to contain: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1045700 [http-nio-9000-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to 'http://localhost:9000/roles/principal/cmata'
+1045701 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )' stored to HttpSession: 'org.apache.catalina.session.StandardSessionFacade@4f855552
+1046479 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1046484 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/**/favicon.ico'
+1046485 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/js/**'
+1046485 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/css/**'
+1046485 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/error'
+1046486 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1046486 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1046486 [http-nio-9000-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1046487 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1046487 [http-nio-9000-exec-4] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1046488 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1046488 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1046733 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1046733 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1046734 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1046734 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /roles/principal/cmata' doesn't match 'POST /login
+1046735 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1046735 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - pathInfo: both null (property equals)
+1046735 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - queryString: both null (property equals)
+1046736 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURI: arg1=/roles/principal/cmata; arg2=/roles/principal/cmata (property equals)
+1046736 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - serverPort: arg1=9000; arg2=9000 (property equals)
+1046737 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURL: arg1=http://localhost:9000/roles/principal/cmata; arg2=http://localhost:9000/roles/principal/cmata (property equals)
+1046739 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - scheme: arg1=http; arg2=http (property equals)
+1046740 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - serverName: arg1=localhost; arg2=localhost (property equals)
+1046741 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - contextPath: arg1=; arg2= (property equals)
+1046742 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.DefaultSavedRequest - servletPath: arg1=/roles/principal/cmata; arg2=/roles/principal/cmata (property equals)
+1046742 [http-nio-9000-exec-4] DEBUG o.s.s.w.s.HttpSessionRequestCache - Removing DefaultSavedRequest from session if present
+1046744 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1046745 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1046745 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1046746 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1046746 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1046746 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1046747 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1046747 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/'
+1046748 [http-nio-9000-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/home'
+1046748 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /roles/principal/cmata; Attributes: [authenticated]
+1046748 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1046749 [http-nio-9000-exec-4] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1046749 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1046750 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1046750 [http-nio-9000-exec-4] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata reached end of additional filter chain; proceeding with original chain
+1047466 [http-nio-9000-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1047467 [http-nio-9000-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1047469 [http-nio-9000-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1047473 [http-nio-9000-exec-4] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1047473 [http-nio-9000-exec-4] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1050419 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/**/favicon.ico'
+1050420 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/js/**'
+1050420 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/css/**'
+1050421 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/error'
+1050421 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1050422 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1050422 [http-nio-9000-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1050423 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1050424 [http-nio-9000-exec-6] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1050425 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1050425 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1050459 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1050459 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/logout'
+1050460 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1050460 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /role/1/permissions' doesn't match 'POST /login
+1050460 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1050461 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1050461 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1050461 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1050462 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1050462 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1050463 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1050463 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/logout'
+1050464 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/'
+1050464 [http-nio-9000-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/home'
+1050464 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /role/1/permissions; Attributes: [authenticated]
+1050465 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1050465 [http-nio-9000-exec-6] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1050466 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1050466 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1050466 [http-nio-9000-exec-6] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions reached end of additional filter chain; proceeding with original chain
+1050565 [http-nio-9000-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1050566 [http-nio-9000-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1050566 [http-nio-9000-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1050567 [http-nio-9000-exec-6] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1050568 [http-nio-9000-exec-6] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1054880 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/**/favicon.ico'
+1054880 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/js/**'
+1054881 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/css/**'
+1054881 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/error'
+1054881 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1054881 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1054882 [http-nio-9000-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1054882 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1054883 [http-nio-9000-exec-7] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1054883 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1054884 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1054913 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1054913 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/logout'
+1054914 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1054914 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /permission/3' doesn't match 'POST /login
+1054914 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1054914 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1054915 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1054915 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1054916 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1054916 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1054916 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1054917 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/logout'
+1054917 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/'
+1054917 [http-nio-9000-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/permission/3'; against '/home'
+1054918 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /permission/3; Attributes: [authenticated]
+1054918 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1054919 [http-nio-9000-exec-7] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1054919 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1054920 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1054920 [http-nio-9000-exec-7] DEBUG o.s.security.web.FilterChainProxy - /permission/3 reached end of additional filter chain; proceeding with original chain
+1054965 [http-nio-9000-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1054965 [http-nio-9000-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1054966 [http-nio-9000-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1054968 [http-nio-9000-exec-7] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1054969 [http-nio-9000-exec-7] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1057236 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/**/favicon.ico'
+1057238 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/js/**'
+1057239 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/css/**'
+1057239 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/error'
+1057240 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1057240 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1057241 [http-nio-9000-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1057241 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1057242 [http-nio-9000-exec-8] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1057242 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1057243 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1057271 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1057273 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/logout'
+1057273 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1057274 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /role/1/permissions' doesn't match 'POST /login
+1057274 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1057275 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1057275 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1057275 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1057276 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1057276 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1057276 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1057277 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/logout'
+1057277 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/'
+1057278 [http-nio-9000-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/role/1/permissions'; against '/home'
+1057278 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /role/1/permissions; Attributes: [authenticated]
+1057279 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1057279 [http-nio-9000-exec-8] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1057279 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1057280 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1057280 [http-nio-9000-exec-8] DEBUG o.s.security.web.FilterChainProxy - /role/1/permissions reached end of additional filter chain; proceeding with original chain
+1057316 [http-nio-9000-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057319 [http-nio-9000-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057325 [http-nio-9000-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057328 [http-nio-9000-exec-8] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1057329 [http-nio-9000-exec-8] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1057723 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/**/favicon.ico'
+1057724 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/js/**'
+1057724 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/css/**'
+1057725 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/error'
+1057725 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1057725 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1057726 [http-nio-9000-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1057726 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1057727 [http-nio-9000-exec-9] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1057727 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1057728 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1057749 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1057749 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1057749 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1057750 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /roles/principal/cmata' doesn't match 'POST /login
+1057750 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1057751 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1057751 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1057751 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1057752 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1057752 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1057752 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1057753 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1057753 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/'
+1057754 [http-nio-9000-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/home'
+1057754 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /roles/principal/cmata; Attributes: [authenticated]
+1057755 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1057755 [http-nio-9000-exec-9] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1057756 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1057756 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1057757 [http-nio-9000-exec-9] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata reached end of additional filter chain; proceeding with original chain
+1057802 [http-nio-9000-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057803 [http-nio-9000-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057804 [http-nio-9000-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1057806 [http-nio-9000-exec-9] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1057806 [http-nio-9000-exec-9] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1061290 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/**/favicon.ico'
+1061291 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/js/**'
+1061291 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/css/**'
+1061291 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/error'
+1061291 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1061292 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1061292 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1061292 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1061293 [http-nio-9000-exec-10] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1061293 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1061293 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1061312 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1061312 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1061313 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1061313 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /roles/principal/cmata' doesn't match 'POST /login
+1061313 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1061313 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1061313 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1061314 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1061314 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1061314 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1061314 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1061315 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/logout'
+1061315 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/'
+1061315 [http-nio-9000-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/roles/principal/cmata'; against '/home'
+1061315 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /roles/principal/cmata; Attributes: [authenticated]
+1061316 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1061316 [http-nio-9000-exec-10] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1061316 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1061316 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1061317 [http-nio-9000-exec-10] DEBUG o.s.security.web.FilterChainProxy - /roles/principal/cmata reached end of additional filter chain; proceeding with original chain
+1061347 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1061347 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1061348 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1061349 [http-nio-9000-exec-10] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1061349 [http-nio-9000-exec-10] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1072368 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/**/favicon.ico'
+1072372 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/js/**'
+1072373 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/css/**'
+1072373 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/error'
+1072373 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1072374 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1072374 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6567e56e: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1072374 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1072375 [http-nio-9000-exec-2] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@14d449fc
+1072375 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1072376 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1072396 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1072397 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1072397 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1072398 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /account/cmata' doesn't match 'POST /login
+1072398 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1072398 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1072399 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1072399 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1072399 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1072400 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1072400 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1072400 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1072401 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/'
+1072401 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/home'
+1072402 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /account/cmata; Attributes: [authenticated]
+1072402 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6567e56e: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffde5d4: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 014ED850422C1669A78CC5AFCA43859E; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1072403 [http-nio-9000-exec-2] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@5739a638, returned: 1
+1072403 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1072403 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1072404 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /account/cmata reached end of additional filter chain; proceeding with original chain
+1073012 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1073013 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+13148 [localhost-startStop-1] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$$EnhancerBySpringCGLIB$$b0802958@5324a3b3}
+13273 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+13273 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+13274 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+13274 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+13378 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login?error']
+13380 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+13381 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+13382 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/logout']
+13382 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/']
+13384 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/home']
+13385 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+13411 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+13414 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+13435 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71876fd7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f2f6da6, org.springframework.security.web.header.HeaderWriterFilter@27a9ad90, org.springframework.security.web.csrf.CsrfFilter@447acb15, com.apex.web.security.authetication.filter.CSRFFilter@7d038f04, org.springframework.security.web.authentication.logout.LogoutFilter@11f37995, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fc9dea3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e601c2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66668e50, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ed40259, org.springframework.security.web.session.SessionManagementFilter@62c14cb5, org.springframework.security.web.access.ExceptionTranslationFilter@4b190f06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b2a69eb]
+13457 [localhost-startStop-1] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+13466 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+13469 [localhost-startStop-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+13470 [localhost-startStop-1] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a86cfd5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b9c2435, org.springframework.security.web.header.HeaderWriterFilter@36686c41, org.springframework.security.web.authentication.logout.LogoutFilter@7b7415d3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31833b04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13d12be3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66ae47bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35009f0c, org.springframework.security.web.session.SessionManagementFilter@4d4a01a3, org.springframework.security.web.access.ExceptionTranslationFilter@450fbf4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c938677]
+1110813 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/**/favicon.ico'
+1110828 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/js/**'
+1110829 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/css/**'
+1110830 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/error'
+1110834 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1110837 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1110841 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+1110842 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+1110853 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1110854 [http-nio-9000-exec-1] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@2f294d1
+1110855 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1110869 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1110906 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1110906 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1110907 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1110908 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /account/cmata' doesn't match 'POST /login
+1110909 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1110909 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1110920 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1110928 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@905571d8: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: ROLE_ANONYMOUS'
+1110929 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1110929 [http-nio-9000-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID 85E6D3776C008725754DE0D473E71FD2 is invalid.
+1110930 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1110930 [http-nio-9000-exec-1] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1110939 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1110940 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/'
+1110940 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/home'
+1110941 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /account/cmata; Attributes: [authenticated]
+1110942 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@905571d8: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: ROLE_ANONYMOUS
+1110980 [http-nio-9000-exec-1] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@45ff6fff, returned: -1
+1111012 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Access is denied (user is anonymous); redirecting to authentication entry point
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:83) ~[spring-security-core-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:232) ~[spring-security-core-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:123) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:122) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:48) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:205) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:120) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at com.apex.web.security.authetication.filter.CSRFFilter.doFilterInternal(CSRFFilter.java:97) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:96) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:53) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176) [spring-security-web-4.0.3.RELEASE.jar:4.0.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+1111015 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using Ant [pattern='/**', GET]
+1111016 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request '/account/cmata' matched by universal pattern '/**'
+1111016 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=Ant [pattern='/**/favicon.ico']]
+1111017 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/**/favicon.ico'
+1111017 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1111018 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@556834c1, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[*/*]]]
+1111024 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - httpRequestMediaTypes=[text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8]
+1111025 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing text/html
+1111026 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith text/html = false
+1111026 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing application/xhtml+xml
+1111027 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith application/xhtml+xml = false
+1111027 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing image/webp
+1111028 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith image/webp = false
+1111028 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing application/xml;q=0.9
+1111029 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - application/json .isCompatibleWith application/xml;q=0.9 = false
+1111030 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing */*;q=0.8
+1111030 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Ignoring
+1111031 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Did not match any media types
+1111031 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1111032 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]]
+1111034 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+1111035 [http-nio-9000-exec-1] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - All requestMatchers returned true
+1111058 [http-nio-9000-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - DefaultSavedRequest added to Session: DefaultSavedRequest[http://localhost:9000/account/cmata]
+1111058 [http-nio-9000-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Calling Authentication entry point.
+1111061 [http-nio-9000-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to 'http://localhost:9000/login'
+1111062 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+1111067 [http-nio-9000-exec-1] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1111094 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/**/favicon.ico'
+1111095 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/js/**'
+1111095 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/css/**'
+1111095 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/error'
+1111096 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1111096 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1111097 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - HttpSession returned null object for SPRING_SECURITY_CONTEXT
+1111097 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@6b02adc8. A new one will be created.
+1111097 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1111098 [http-nio-9000-exec-2] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@2f294d1
+1111098 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1111099 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1111099 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1111100 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+1111100 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1111100 [http-nio-9000-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /login' doesn't match 'POST /login
+1111101 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1111101 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - pathInfo: both null (property equals)
+1111103 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - queryString: both null (property equals)
+1111105 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURI: arg1=/account/cmata; arg2=/login (property not equals)
+1111105 [http-nio-9000-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+1111106 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1111106 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1111107 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@905571d8: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: ROLE_ANONYMOUS'
+1111108 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1111108 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1111109 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1111109 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /login; Attributes: [permitAll]
+1111110 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@905571d8: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: ROLE_ANONYMOUS
+1111118 [http-nio-9000-exec-2] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@45ff6fff, returned: 1
+1111119 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1111119 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1111120 [http-nio-9000-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login reached end of additional filter chain; proceeding with original chain
+1111928 [http-nio-9000-exec-2] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1111928 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+1111929 [http-nio-9000-exec-2] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1119957 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/**/favicon.ico'
+1119957 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/js/**'
+1119958 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/css/**'
+1119958 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/error'
+1119959 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1119959 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1119960 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - HttpSession returned null object for SPRING_SECURITY_CONTEXT
+1119960 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@6b02adc8. A new one will be created.
+1119961 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1119964 [http-nio-9000-exec-3] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@2f294d1
+1119965 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1119965 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1119966 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1119967 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+1119967 [http-nio-9000-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1119968 [http-nio-9000-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+1119968 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+1119970 [http-nio-9000-exec-3] DEBUG o.s.s.a.ProviderManager - Authentication attempt using com.apex.web.security.authetication.JPAAuthenticationProvider
+1120446 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.s.CompositeSessionAuthenticationStrategy - Delegating to org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy@40fc16a7
+1120450 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.s.CompositeSessionAuthenticationStrategy - Delegating to org.springframework.security.web.csrf.CsrfAuthenticationStrategy@183a93fa
+1120452 [http-nio-9000-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Authentication success. Updating SecurityContextHolder to contain: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@38bd7816: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1120454 [http-nio-9000-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to 'http://localhost:9000/account/cmata'
+1120455 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@38bd7816: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@38bd7816: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )' stored to HttpSession: 'org.apache.catalina.session.StandardSessionFacade@6b02adc8
+1121348 [http-nio-9000-exec-3] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+1121356 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/**/favicon.ico'
+1121357 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/js/**'
+1121357 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/css/**'
+1121357 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/error'
+1121358 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 1 of 13 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+1121358 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 2 of 13 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+1121358 [http-nio-9000-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@38bd7816: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@38bd7816: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1121359 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 3 of 13 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+1121359 [http-nio-9000-exec-5] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@2f294d1
+1121360 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 4 of 13 in additional filter chain; firing Filter: 'CsrfFilter'
+1121360 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 5 of 13 in additional filter chain; firing Filter: 'CSRFFilter'
+1121610 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 6 of 13 in additional filter chain; firing Filter: 'LogoutFilter'
+1121611 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1121612 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 7 of 13 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+1121612 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /account/cmata' doesn't match 'POST /login
+1121613 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 8 of 13 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+1121613 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - pathInfo: both null (property equals)
+1121613 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - queryString: both null (property equals)
+1121614 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURI: arg1=/account/cmata; arg2=/account/cmata (property equals)
+1121614 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - serverPort: arg1=9000; arg2=9000 (property equals)
+1121614 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - requestURL: arg1=http://localhost:9000/account/cmata; arg2=http://localhost:9000/account/cmata (property equals)
+1121614 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - scheme: arg1=http; arg2=http (property equals)
+1121615 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - serverName: arg1=localhost; arg2=localhost (property equals)
+1121615 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - contextPath: arg1=; arg2= (property equals)
+1121615 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.DefaultSavedRequest - servletPath: arg1=/account/cmata; arg2=/account/cmata (property equals)
+1121616 [http-nio-9000-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - Removing DefaultSavedRequest from session if present
+1121620 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 9 of 13 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+1121621 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 10 of 13 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+1121621 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@38bd7816: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )'
+1121622 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 11 of 13 in additional filter chain; firing Filter: 'SessionManagementFilter'
+1121622 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 12 of 13 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+1121622 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata at position 13 of 13 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+1121623 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/logout'
+1121623 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/'
+1121624 [http-nio-9000-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/account/cmata'; against '/home'
+1121624 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /account/cmata; Attributes: [authenticated]
+1121625 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@38bd7816: Principal: cmata; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@0: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 5CF1F3CE878FB008CF9E6FB26976DEA8; Granted Authorities: Role(name=Administrator, description=Superpowerful user in the system )
+1121625 [http-nio-9000-exec-5] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@45ff6fff, returned: 1
+1121625 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+1121626 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+1121626 [http-nio-9000-exec-5] DEBUG o.s.security.web.FilterChainProxy - /account/cmata reached end of additional filter chain; proceeding with original chain
+1122210 [http-nio-9000-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1122211 [http-nio-9000-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1122212 [http-nio-9000-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper - Skip invoking on
+1122214 [http-nio-9000-exec-5] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+1122214 [http-nio-9000-exec-5] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
