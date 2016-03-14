@@ -14,6 +14,8 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -51,6 +53,7 @@ public class Session extends AbstractEntity {
     /**
      * 
      */
+    @JsonInclude(Include.NON_NULL)
     @JsonFormat(shape = STRING, pattern = DATE_TIMEZONE_FORMAT)
     private Date endTime;
 
@@ -65,6 +68,7 @@ public class Session extends AbstractEntity {
     @NotNull(message = "user.session.ip.not.null")
     private String remoteIPAddress;
 
+    @JsonInclude(Include.NON_NULL)
     @Enumerated(EnumType.STRING)
     private Agent closeBy;
 

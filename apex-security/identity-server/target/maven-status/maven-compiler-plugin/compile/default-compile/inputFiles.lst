@@ -13,11 +13,13 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/AccountRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Person.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/Constants.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/SessionController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/JpaUserDetailService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Session.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/AccountController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Account.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/PermissionService.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/SessionResourceAssembler.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/Application.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/RoleService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/message/Type.java

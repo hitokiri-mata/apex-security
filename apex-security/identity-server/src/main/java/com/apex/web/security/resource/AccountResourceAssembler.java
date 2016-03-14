@@ -1,5 +1,8 @@
 package com.apex.web.security.resource;
 
+import static com.apex.web.security.resource.RoleResourceAssembler.RoleLinks.ROLES;
+
+import static com.apex.web.security.resource.SessionResourceAssembler.SessionLinks.SESSIONS;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
@@ -8,6 +11,7 @@ import org.springframework.hateoas.ResourceAssembler;
 
 import com.apex.web.security.domain.Account;
 import com.apex.web.security.rest.controller.AccountController;
+import com.apex.web.security.rest.controller.RoleController;
 import com.apex.web.security.rest.controller.SessionController;
 
 public class AccountResourceAssembler
@@ -32,7 +36,10 @@ public class AccountResourceAssembler
 	resource.add(
 		linkTo(methodOn(SessionController.class).getByAccountPrincipal(
 			account.getCredential().getUsername(), null, null))
-				.withRel(""));
+				.withRel(SESSIONS));
+	resource.add(linkTo(methodOn(RoleController.class).getByPrincipal(
+		account.getCredential().getUsername(), null, null))
+			.withRel(ROLES));
 	return resource;
     }
 }

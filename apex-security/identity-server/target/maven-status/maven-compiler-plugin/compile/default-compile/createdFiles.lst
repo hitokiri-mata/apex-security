@@ -29,8 +29,10 @@ com/apex/web/security/domain/Permission.class
 com/apex/web/security/rest/controller/PermissionController.class
 com/apex/web/security/service/impl/JpaUserDetailService.class
 com/apex/web/security/service/RoleService.class
+com/apex/web/security/rest/controller/SessionController.class
 com/apex/web/security/authetication/SuccessLogoutHandler.class
 com/apex/web/security/Application.class
+com/apex/web/security/resource/SessionResourceAssembler$SessionLinks.class
 com/apex/web/security/service/impl/RoleServiceImpl.class
 com/apex/web/security/domain/Person$Gender.class
 com/apex/web/security/domain/Role.class
@@ -42,6 +44,7 @@ com/apex/web/security/resource/PermissionResourceAssembler$RoleLinks.class
 com/apex/web/security/resource/TicketValidator.class
 com/apex/web/security/service/LogiService.class
 com/apex/web/security/resource/RoleResourceAssembler.class
+com/apex/web/security/resource/SessionResourceAssembler.class
 com/apex/web/security/domain/Account$Credential.class
 com/apex/web/security/message/Type.class
 com/apex/web/security/domain/Person.class

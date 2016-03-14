@@ -2,8 +2,10 @@ package com.apex.web.security.resource;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
+import org.springframework.stereotype.Component;
 
 import com.apex.web.security.domain.Session;
 import com.apex.web.security.rest.controller.SessionController;
@@ -13,6 +15,7 @@ import com.apex.web.security.rest.controller.SessionController;
  * @author hitokiri
  *
  */
+@Component
 public class SessionResourceAssembler
 	implements ResourceAssembler<Session, Resource<Session>> {
 

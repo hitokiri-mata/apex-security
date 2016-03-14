@@ -27,6 +27,7 @@ import lombok.RequiredArgsConstructor;
 @ExposesResourceFor(Role.class)
 @RequiredArgsConstructor(onConstructor = @__(@Autowired) )
 public class RoleController {
+
     private final @NonNull RoleService roleService;
     private final @NonNull RoleResourceAssembler roleResourceAssembler;
 

@@ -30,6 +30,8 @@ import org.hibernate.annotations.TypeDef;
 import org.jasypt.hibernate4.type.EncryptedStringType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -60,14 +62,16 @@ public class Account extends AbstractEntity {
     /**
      * 
      */
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "role_account", joinColumns = @JoinColumn(name = "account_id", referencedColumnName = ID_PROPERTY_NAME) , inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = ID_PROPERTY_NAME) )
     @NotNull(message = "user.role.null")
-    private List<Role> roles;
+    private List<Role> roles = new ArrayList<>();
 
     /**
      * 
      */
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Session> sessions = new ArrayList<>();
 
@@ -82,6 +86,7 @@ public class Account extends AbstractEntity {
      * 
      * @return
      */
+    @JsonInclude(Include.NON_NULL)
     public Session getActiveSession() {
 	if (this.getSessions() != null) {
 	    for (Session session : this.getSessions()) {

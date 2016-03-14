@@ -33,15 +33,15 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired) )
 public class SessionController {
 
-    private @NonNull SessionResourceAssembler sessionResourceAssembler;
-    private @NonNull SessionService sessionService;
+    private final @NonNull SessionResourceAssembler sessionResourceAssembler;
+    private final @NonNull SessionService sessionService;
 
     /**
      * 
      * @param username
      * @return
      */
-    @RequestMapping(path = "session/{id}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/{id}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<?> getById(@PathVariable("id") Long id) {
 	return ResponseEntity.ok(sessionResourceAssembler
 		.toResource(sessionService.getById(id)));
@@ -52,7 +52,7 @@ public class SessionController {
      * @param username
      * @return
      */
-    @RequestMapping(path = "account/{principal}/sessions", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/account/{principal}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<?> getByAccountPrincipal(
 	    @PathVariable("principal") String principal,
 	    @PageableDefault Pageable pageable,
