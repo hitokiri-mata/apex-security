@@ -1,7 +1,18 @@
 package com.apex.web.security.validation;
 
-public interface TicketValidator {
+import com.apex.web.security.exception.ValidationException;
 
-    void validate(String ticket);
+/**
+ * 
+ * @author hitokiri
+ *
+ */
+public interface TicketValidator {
+    /**
+     * 
+     * @param ticket
+     * @throws ValidationException
+     */
+    void validate(String ticket) throws ValidationException;
 
 }

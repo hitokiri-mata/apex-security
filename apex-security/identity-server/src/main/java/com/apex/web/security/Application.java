@@ -3,6 +3,9 @@ package com.apex.web.security;
 import static com.apex.web.security.Constants.DEFAULT_CSRF_HEADER_NAME;
 import static com.apex.web.security.Constants.STRING_ENCRYPTOR_NAME;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -40,6 +43,9 @@ import com.apex.web.security.authetication.LogiAnalyticSecurityKeyHandler;
 import com.apex.web.security.authetication.SuccessForwarderHandler;
 import com.apex.web.security.authetication.SuccessLogoutHandler;
 import com.apex.web.security.authetication.filter.CSRFFilter;
+import com.apex.web.security.validation.TicketValidator;
+
+import lombok.NonNull;
 
 @EnableAsync
 @EnableEntityLinks
@@ -61,15 +67,6 @@ public class Application {
 	return messageBundle;
     }
 
-    /*
-     * @Bean public FilterRegistrationBean someFilterRegistration() {
-     * 
-     * FilterRegistrationBean registration = new FilterRegistrationBean();
-     * registration.setFilter(new CatchURLFilter());
-     * registration.addUrlPatterns("/login"); //
-     * registration.addInitParameter("paramName", "paramValue"); //
-     * registration.setName("someFilter"); return registration; }
-     */
     @Configuration
     public static class MvcConfig extends WebMvcConfigurerAdapter {
 	/*
@@ -87,6 +84,15 @@ public class Application {
 	    registry.addViewController("/login").setViewName("login");
 	}
 
+    }
+
+    private @Autowired TicketValidator simpleTicketValidator;
+
+    @Bean
+    public List<TicketValidator> validationChain() {
+	List<TicketValidator> validationChain = new ArrayList<>();
+	validationChain.add(simpleTicketValidator);
+	return validationChain;
     }
 
     @Configuration
@@ -135,6 +141,11 @@ public class Application {
 
     }
 
+    /**
+     * 
+     * @author hitokiri
+     *
+     */
     @EnableCaching
     @EnableAutoConfiguration
     @EnableTransactionManagement
