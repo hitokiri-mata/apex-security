@@ -21,10 +21,22 @@ public interface SessionRepository
      * @param date
      * @return
      */
-    List<Session> findByLastRequestBeforeAndEndTimeIsNull(Date date);
+    List<Session> findByLastRequestBeforeAndEndTimeIsNullOrderByStartTimeDesc(
+	    Date date);
 
+    /**
+     * 
+     * @param ticket
+     * @return
+     */
     Session findByTicket(String ticket);
 
+    /**
+     * 
+     * @param username
+     * @param pageable
+     * @return
+     */
     Page<Session> findByAccountCredentialUsername(String username,
 	    Pageable pageable);
 

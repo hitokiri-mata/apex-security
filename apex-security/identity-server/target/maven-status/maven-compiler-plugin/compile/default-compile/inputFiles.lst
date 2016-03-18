@@ -1,3 +1,4 @@
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/OutsideController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/SessionRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/impl/AccountServiceImpl.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/PermissionResourceAssembler.java
@@ -19,11 +20,13 @@
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/AccountController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/Account.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/PermissionService.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/domain/repository/LocalStorageRepository.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/SessionResourceAssembler.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/Application.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/RoleService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/message/Type.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/resource/TicketValidator.java
+/Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/authetication/SuccessForwarderHandler.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/rest/controller/RoleController.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/service/LogiService.java
 /Users/hitokiri/git/apex-security/apex-security/identity-server/src/main/java/com/apex/web/security/validation/TicketValidator.java

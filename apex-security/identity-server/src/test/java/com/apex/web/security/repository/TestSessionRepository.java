@@ -15,7 +15,8 @@ public class TestSessionRepository extends AbstractIntegrationTest {
 	DateTime now = new DateTime();
 	now.minusMinutes(20);
 	System.out.println("-->> " + sessionRepository
-		.findByLastRequestBeforeAndEndTimeIsNull(now.toDate()));
+		.findByLastRequestBeforeAndEndTimeIsNullOrderByStartTimeDesc(
+			now.toDate()));
     }
 
 }

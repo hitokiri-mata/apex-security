@@ -37,6 +37,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import com.apex.web.security.authetication.LogiAnalyticSecurityKeyHandler;
+import com.apex.web.security.authetication.SuccessForwarderHandler;
 import com.apex.web.security.authetication.SuccessLogoutHandler;
 import com.apex.web.security.authetication.filter.CSRFFilter;
 
@@ -60,6 +61,15 @@ public class Application {
 	return messageBundle;
     }
 
+    /*
+     * @Bean public FilterRegistrationBean someFilterRegistration() {
+     * 
+     * FilterRegistrationBean registration = new FilterRegistrationBean();
+     * registration.setFilter(new CatchURLFilter());
+     * registration.addUrlPatterns("/login"); //
+     * registration.addInitParameter("paramName", "paramValue"); //
+     * registration.setName("someFilter"); return registration; }
+     */
     @Configuration
     public static class MvcConfig extends WebMvcConfigurerAdapter {
 	/*
@@ -85,6 +95,7 @@ public class Application {
 	 * 
 	 */
 	private @Autowired LogiAnalyticSecurityKeyHandler logiAnalyticSecurityKeyHandler;
+	private @Autowired SuccessForwarderHandler successForwarderHandler;
 	private @Autowired AuthenticationProvider jpaAuthenticationProvider;
 	private @Autowired SuccessLogoutHandler successLogoutHandler;
 	private @Autowired CSRFFilter csrfFilter;
@@ -105,10 +116,11 @@ public class Application {
 		    .addFilterAfter(csrfFilter, CsrfFilter.class)
 		    .authenticationProvider(jpaAuthenticationProvider)
 		    .formLogin().loginPage("/login").permitAll()
-		    .successHandler(logiAnalyticSecurityKeyHandler).and()
-		    .logout()
+		    .successHandler(logiAnalyticSecurityKeyHandler)
+		    .successHandler(successForwarderHandler).and().logout()
 		    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		    .logoutSuccessHandler(successLogoutHandler).permitAll();
+
 	}
 
 	/**

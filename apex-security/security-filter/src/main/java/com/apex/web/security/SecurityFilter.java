@@ -19,6 +19,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SecurityFilter implements Filter {
     public static final String CROSS_SITE_REQUEST_FORGERY_TOKEN = "XSRF-TOKEN";
+    public static final String SECURITY_SERVER_URL = "secutityServerLoginUrl";
+    public static final String SECURITY_SERVER_NAME = "securityServerName";
+    private String securityServerLoginUrl;
+    private String securityServerName;
+    private FilterConfig config;
 
     /*
      * (non-Javadoc)
@@ -27,7 +32,7 @@ public class SecurityFilter implements Filter {
      */
     @Override
     public void init(FilterConfig config) throws ServletException {
-	config.getServletContext();
+	this.config = config;
     }
 
     /*
@@ -37,7 +42,6 @@ public class SecurityFilter implements Filter {
      */
     @Override
     public void destroy() {
-	// TODO Auto-generated method stub
 
     }
 
@@ -47,24 +51,48 @@ public class SecurityFilter implements Filter {
      * @see javax.servlet.Filter#doFilter(javax.servlet.ServletRequest,
      * javax.servlet.ServletResponse, javax.servlet.FilterChain)
      */
-    @SuppressWarnings("unused")
     @Override
     public void doFilter(ServletRequest servletRequest,
 	    ServletResponse servletResponse, FilterChain filterChain)
 		    throws IOException, ServletException {
+	// http://www.sipeliculas.com/la-pianista
 	HttpServletRequest request = (HttpServletRequest) servletRequest;
 	HttpServletResponse response = (HttpServletResponse) servletResponse;
-	Cookie[] cookies = request.getCookies();
-	//
+	System.out.println("-->> --->>> " + request.getRequestURL());
+	System.out.println("-->> --->>> --->> " + request.getRequestURL());
+
+	this.securityServerLoginUrl = config
+		.getInitParameter(SECURITY_SERVER_URL);
+	this.securityServerName = config.getInitParameter(securityServerName);
+	// getting the current security ticket from httpRequest and validate
+	if (!validateTicket(getSecurityTicket(request))) {
+	    response.sendRedirect(securityServerLoginUrl + "?redirect="
+		    + request.getRequestURL());
+	}
+    }
+
+    /**
+     * 
+     * @param request
+     * @return
+     */
+    private String getSecurityTicket(HttpServletRequest request) {
 	String securityTicket = null;
+	Cookie[] cookies = request.getCookies();
+	if (cookies == null) {
+	    return null;
+	}
+	//
 	for (Cookie cookie : cookies) {
 	    if (CROSS_SITE_REQUEST_FORGERY_TOKEN.equals(cookie.getName())) {
 		securityTicket = cookie.getValue();
 		break;
 	    }
 	}
-	//
-	
+	return securityTicket;
     }
 
+    private boolean validateTicket(String ticket) {
+	return false;
+    }
 }

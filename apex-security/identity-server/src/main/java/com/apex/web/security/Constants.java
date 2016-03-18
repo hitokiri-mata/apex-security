@@ -28,5 +28,6 @@ public class Constants {
     public static final String LOGI_USER_ROLES = "{roles}";
     public static final String COMMA = ",";
     public static final String LOGI_SECRETE_KEY = "LOGI_SECRETKEY";
+    public static final String SPRING_SECURITY_SAVED_REQUEST = "SPRING_SECURITY_SAVED_REQUEST";
 
 }

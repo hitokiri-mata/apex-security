@@ -38,7 +38,9 @@ public class SessionServiceImpl implements SessionService {
      */
     @Override
     public List<Session> getByLastRequestBefore(Date date) {
-	return sessionRepository.findByLastRequestBeforeAndEndTimeIsNull(date);
+	return sessionRepository
+		.findByLastRequestBeforeAndEndTimeIsNullOrderByStartTimeDesc(
+			date);
     }
 
     /*

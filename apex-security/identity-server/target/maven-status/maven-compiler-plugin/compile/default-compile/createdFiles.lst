@@ -29,11 +29,14 @@ com/apex/web/security/domain/Permission.class
 com/apex/web/security/rest/controller/PermissionController.class
 com/apex/web/security/service/impl/JpaUserDetailService.class
 com/apex/web/security/service/RoleService.class
+com/apex/web/security/rest/controller/OutsideController.class
 com/apex/web/security/rest/controller/SessionController.class
 com/apex/web/security/authetication/SuccessLogoutHandler.class
 com/apex/web/security/Application.class
+com/apex/web/security/domain/repository/LocalStorageRepository.class
 com/apex/web/security/resource/SessionResourceAssembler$SessionLinks.class
 com/apex/web/security/service/impl/RoleServiceImpl.class
+com/apex/web/security/authetication/SuccessForwarderHandler.class
 com/apex/web/security/domain/Person$Gender.class
 com/apex/web/security/domain/Role.class
 com/apex/web/security/domain/repository/AccountRepository.class
