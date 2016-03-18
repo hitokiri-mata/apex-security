@@ -44,6 +44,7 @@ com/apex/web/security/service/PermissionService.class
 com/apex/web/security/resource/AccountResourceAssembler$AccountLinks.class
 com/apex/web/security/Constants.class
 com/apex/web/security/resource/PermissionResourceAssembler$RoleLinks.class
+com/apex/web/security/validation/SimpleTicketValidator.class
 com/apex/web/security/resource/TicketValidator.class
 com/apex/web/security/service/LogiService.class
 com/apex/web/security/resource/RoleResourceAssembler.class
@@ -52,9 +53,9 @@ com/apex/web/security/domain/Account$Credential.class
 com/apex/web/security/message/Type.class
 com/apex/web/security/domain/Person.class
 com/apex/web/security/domain/Person$Phone.class
+com/apex/web/security/exception/ValidationException.class
 com/apex/web/security/exception/LogiServiceException.class
 com/apex/web/security/message/DefaultErrorMessage.class
-com/apex/web/security/validation/RestTicketValidator.class
 com/apex/web/security/exception/NonActiveAccountException.class
 com/apex/web/security/authetication/JPAAuthenticationProvider.class
 com/apex/web/security/authetication/filter/CSRFFilter.class
