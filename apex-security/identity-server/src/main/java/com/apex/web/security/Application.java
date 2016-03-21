@@ -39,13 +39,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.apex.web.security.authetication.LogiAnalyticSecurityKeyHandler;
 import com.apex.web.security.authetication.SuccessForwarderHandler;
 import com.apex.web.security.authetication.SuccessLogoutHandler;
 import com.apex.web.security.authetication.filter.CSRFFilter;
+import com.apex.web.security.authetication.thirdparty.LogiAnalyticSecurityKeyHandler;
 import com.apex.web.security.validation.TicketValidator;
-
-import lombok.NonNull;
 
 @EnableAsync
 @EnableEntityLinks
@@ -95,11 +93,14 @@ public class Application {
 	return validationChain;
     }
 
+    /**
+     * 
+     * @author hitokiri
+     *
+     */
     @Configuration
     public static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	/**
-	 * 
-	 */
+
 	private @Autowired LogiAnalyticSecurityKeyHandler logiAnalyticSecurityKeyHandler;
 	private @Autowired SuccessForwarderHandler successForwarderHandler;
 	private @Autowired AuthenticationProvider jpaAuthenticationProvider;

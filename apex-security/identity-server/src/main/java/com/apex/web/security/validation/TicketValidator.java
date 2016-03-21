@@ -1,7 +1,5 @@
 package com.apex.web.security.validation;
 
-import com.apex.web.security.exception.ValidationException;
-
 /**
  * 
  * @author hitokiri

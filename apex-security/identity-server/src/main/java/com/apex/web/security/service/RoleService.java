@@ -5,6 +5,11 @@ import org.springframework.data.domain.Pageable;
 
 import com.apex.web.security.domain.Role;
 
+/**
+ * 
+ * @author hitokiri
+ *
+ */
 public interface RoleService {
 
     Page<Role> getAll(Pageable pageable);

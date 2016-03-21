@@ -5,6 +5,11 @@ import org.springframework.data.domain.Pageable;
 
 import com.apex.web.security.domain.Permission;
 
+/**
+ * 
+ * @author hitokiri
+ *
+ */
 public interface PermissionService {
 
     Permission getById(Long id);

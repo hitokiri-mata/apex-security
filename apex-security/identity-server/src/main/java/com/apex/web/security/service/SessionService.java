@@ -8,6 +8,11 @@ import org.springframework.data.domain.Pageable;
 
 import com.apex.web.security.domain.Session;
 
+/**
+ * 
+ * @author hitokiri
+ *
+ */
 public interface SessionService {
 
     Session getById(Long id);

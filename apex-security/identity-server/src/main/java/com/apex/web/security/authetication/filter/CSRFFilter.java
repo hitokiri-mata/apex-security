@@ -1,5 +1,7 @@
 package com.apex.web.security.authetication.filter;
 
+import static com.apex.web.security.Constants.WEB_APPLICATION_ROOT_PATH;
+
 import java.io.IOException;
 import java.util.Date;
 
@@ -17,7 +19,6 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.WebUtils;
-import static com.apex.web.security.Constants.WEB_APPLICATION_ROOT_PATH;
 
 import com.apex.web.security.domain.Account;
 import com.apex.web.security.domain.Session;
@@ -80,6 +81,8 @@ public class CSRFFilter extends OncePerRequestFilter {
 		session.setRemoteIPAddress(request.getRemoteAddr());
 		session.setStartTime(new Date());
 		session.setAccount(account);
+		// getting the current http session ID.
+		session.setJSessionId(request.getSession(true).getId());
 		account.getSessions().add(session);
 		accountService.saveOrUpdate(account);
 		log.debug("creating a security ticket '" + token

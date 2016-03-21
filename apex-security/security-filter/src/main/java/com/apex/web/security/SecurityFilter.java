@@ -58,9 +58,6 @@ public class SecurityFilter implements Filter {
 	// http://www.sipeliculas.com/la-pianista
 	HttpServletRequest request = (HttpServletRequest) servletRequest;
 	HttpServletResponse response = (HttpServletResponse) servletResponse;
-	System.out.println("-->> --->>> " + request.getRequestURL());
-	System.out.println("-->> --->>> --->> " + request.getRequestURL());
-
 	this.securityServerLoginUrl = config
 		.getInitParameter(SECURITY_SERVER_URL);
 	this.securityServerName = config.getInitParameter(securityServerName);
@@ -93,6 +90,6 @@ public class SecurityFilter implements Filter {
     }
 
     private boolean validateTicket(String ticket) {
-	return false;
+	return true;
     }
 }

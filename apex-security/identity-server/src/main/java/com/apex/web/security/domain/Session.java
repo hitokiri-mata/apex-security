@@ -39,6 +39,9 @@ public class Session extends AbstractEntity {
     @Column(unique = true, nullable = false)
     private String ticket;
 
+    @Column(unique = true, nullable = false)
+    private String jSessionId;
+
     @OneToOne
     @NotNull
     @JsonIgnore
@@ -71,5 +74,9 @@ public class Session extends AbstractEntity {
     @JsonInclude(Include.NON_NULL)
     @Enumerated(EnumType.STRING)
     private Agent closeBy;
+
+    public boolean isActive() {
+	return (endTime == null) ? true : false;
+    }
 
 }

@@ -1,9 +1,17 @@
 package com.apex.web.security.service;
 
-import com.apex.web.security.exception.LogiServiceException;
-
+/**
+ * 
+ * @author hitokiri
+ *
+ */
 public interface LogiService {
-
-    String getSecurityKey(String request) throws LogiServiceException;
+    /**
+     * 
+     * @param request
+     * @return
+     * @throws ServiceException
+     */
+    String getSecurityKey(String request) throws ServiceException;
 
 }
