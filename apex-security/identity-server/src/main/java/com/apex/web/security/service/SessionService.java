@@ -21,6 +21,8 @@ public interface SessionService {
 
     List<Session> getByLastRequestBefore(Date date);
 
+    Session getActiveSessionByTicket(String ticket);
+    
     Session getByTicket(String ticket);
 
     Session saveOrUpdate(Session session);

@@ -3,23 +3,75 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Spring Security Example</title>
+<meta charset="UTF-8" />
+<title>Login Form</title>
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/jquery.modalEffects.js"></script>
+<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
-	<div th:if="${param.error}">Invalid username and password.</div>
-	<div th:if="${param.logout}">You have been logged out.</div>
-	<form th:action="@{/login}" method="post">
-		<div>
-			<label> User Name : <input type="text" name="username" />
-			</label>
+	<div class="md-modal md-effect-16" id="modal-16">
+		<div class="md-content">
+			<h3>Login failed</h3>
+			<div>
+				<p>Login failed, try again.</p>
+				<ul>
+					<li><strong>Reason:</strong>&nbsp;Bad credentials, check you
+						password or Email and try again</li>
+				</ul>
+				<button class="md-close"
+					onclick="$('#modal-16').addClass('md-show');">OK</button>
+			</div>
 		</div>
-		<div>
-			<label> Password: <input type="password" name="password" />
-			</label>
+	</div>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+			<div th:if="${param.error}">
+				<!-- 	<button class="md-trigger" data-modal="modal-16">Blur</button> -->
+				<div class="md-trigger" data-modal="modal-16"></div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#modal-16").addClass("md-show");
+					});
+				</script>
+
+			</div>
+			<form class="login-form" th:action="@{/login}" method="post">
+
+				<div class="control-group">
+					<input type="text" name="username" class="login-field" value=""
+						placeholder="username" id="login-name" /> <label
+						class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+				<div class="control-group">
+					<input type="password" name="password" class="login-field" value=""
+						placeholder="password" id="login-pass" /> <label
+						class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+				<input class="btn btn-primary btn-large btn-block" type="submit"
+					value="Sign In" />
+				<!-- 	<a class="btn btn-primary btn-large btn-block" href="#">login</a> -->
+				<a class="login-link" href="#">Lost your password?</a>
+
+			</form>
 		</div>
-		<div>
-			<input type="submit" value="Sign In" />
-		</div>
-	</form>
+	</div>
+	<div class="md-overlay"></div>
+	<script src="js/classie.js"></script>
+	<script src="js/modalEffects.js"></script>
+	<script>
+		// this is important for IEs
+		var polyfilter_scriptpath = '/js/';
+	</script>
+	<script src="js/cssParser.js"></script>
+	<script src="js/css-filters-polyfill.js"></script>
 </body>
 </html>

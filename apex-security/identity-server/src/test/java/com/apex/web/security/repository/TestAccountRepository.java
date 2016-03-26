@@ -100,6 +100,7 @@ public class TestAccountRepository extends AbstractIntegrationTest {
 	account.setPerson(person);
 	account.setRoles(roles);
 	account.setPerson(person);
+	account.setActive(true);
 	//
 	// Session session = new Session();
 	// session.setAccount(account);

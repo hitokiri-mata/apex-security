@@ -2,16 +2,27 @@ package com.apex.web.security.domain.repository;
 
 import java.util.Date;
 import java.util.List;
-
+import static com.apex.web.security.Constants.SECURITY_TICKET_CACHE_NAME;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.apex.web.security.domain.Session;
 
-/*
+/**
+ * Simple repository encharge to handling the persistent information about the
+ * system user sessions.
  * 
+ * <p>
+ * <i>View a Source Code</i>&nbsp;{@link SessionRepository}
+ * </p>
+ * 
+ * @author <a href="mailto:cesar.mata@yuxipacific.com">Cesar a Mata de Avila</a>
+ * @verison %I%,%G%
+ *
  */
+
 public interface SessionRepository
 	extends PagingAndSortingRepository<Session, Long> {
     /**
@@ -23,6 +34,14 @@ public interface SessionRepository
      */
     List<Session> findByLastRequestBeforeAndEndTimeIsNullOrderByStartTimeDesc(
 	    Date date);
+
+    /**
+     * 
+     * @param ticket
+     * @return
+     */
+    @Cacheable(SECURITY_TICKET_CACHE_NAME)
+    Session findByTicketAndEndTimeIsNullAndAccountActiveTrue(String ticket);
 
     /**
      * 

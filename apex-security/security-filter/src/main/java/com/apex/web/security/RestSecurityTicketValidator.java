@@ -42,8 +42,9 @@ public class RestSecurityTicketValidator implements SecurityTicketValidator {
 	    connection.setRequestProperty("Accept", "application/json");
 
 	    connection.addRequestProperty("Cookie",
-		    "XSRF-TOKEN=6cadedbb-dfc4-41d5-a7fd-9b2d17cb6f79");
+		    "JSESSIONID=4031AE167627A558E62400E094FF444E; XSRF-TOKEN=931f478f-3204-4091-a2ac-4731b4bf691c");
 	    // getting the webservice response code.
+	    System.out.println("response code " + connection.getResponseCode());
 	    if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
 		throw new RuntimeException("Failed : HTTP error code : "
 			+ connection.getResponseCode());
@@ -53,10 +54,10 @@ public class RestSecurityTicketValidator implements SecurityTicketValidator {
 	    bufferReader = new BufferedReader(
 		    new InputStreamReader((connection.getInputStream())));
 	    // print the validation service content.
-	    String output;
+	    String line;
 	    System.out.println("Output from Server .... \n");
-	    while ((output = bufferReader.readLine()) != null) {
-		System.out.println(output);
+	    while ((line = bufferReader.readLine()) != null) {
+		System.out.println(line);
 	    }
 	} catch (MalformedURLException e) {
 	    // TODO Auto-generated catch block
@@ -73,7 +74,7 @@ public class RestSecurityTicketValidator implements SecurityTicketValidator {
     public static void main(String[] args) {
 	RestSecurityTicketValidator validator = new RestSecurityTicketValidator();
 	validator.setServerAddress(
-		"http://localhost:9000/sessions/ticket/0b6a101b-8a1c-441d-88f0-2db8e7bce0a8/valid");
+		"http://localhost:9000/sessions/active/ticket/ac8e78a4-0a36-403d-a62c-540e95fe614b");
 	validator.validate("");
     }
 

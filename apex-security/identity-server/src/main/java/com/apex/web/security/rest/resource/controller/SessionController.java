@@ -12,7 +12,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -30,15 +29,19 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 
- * @author hitokiri
+ * <p>
+ * <i>View a Source Code</i>&nbsp;{@link CustomExceptionHandler}
+ * </p>
+ * 
+ * @author <a href="cesar.mata@yuxipacific.com">Cesar a Mata de Avila</a>
+ * @version %I%,%G%
  *
  */
 @Controller
 @RequestMapping(SESSIONS)
 @ExposesResourceFor(Session.class)
 @RequiredArgsConstructor(onConstructor = @__(@Autowired) )
-public class SessionController {
-
+public class SessionController extends I18NExceptionControllerAdvice {
     private final @NonNull SessionResourceAssembler sessionResourceAssembler;
     private final @NonNull SessionService sessionService;
     private final @NonNull List<TicketValidator> validationChain = new ArrayList<>();
@@ -60,18 +63,11 @@ public class SessionController {
      * @return
      * @throws ValidationException
      */
-    @RequestMapping(path = "/ticket/{ticket}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/active/ticket/{ticket}", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<?> validate(@PathVariable("ticket") String ticket) {
-	try {
-	    // execute all validation over the session ticker
-	    for (TicketValidator validator : validationChain) {
-		validator.validate(ticket);
-	    }
-	} catch (ValidationException e) {
-	    return new ResponseEntity<HttpStatus>(
-		    HttpStatus.INTERNAL_SERVER_ERROR);
-	}
-	return new ResponseEntity<HttpStatus>(HttpStatus.OK);
+	System.out.println("@@@@@@@@@@@@@@@@@@@@ " + ticket);
+	return ResponseEntity.ok(sessionResourceAssembler
+		.toResource(sessionService.getActiveSessionByTicket(ticket)));
     }
 
     /**

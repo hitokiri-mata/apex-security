@@ -29,8 +29,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Simple component encharge to create a CSRFToken in ordet to aviable tha
+ * thriparty authentcation.
+ * <p>
+ * <i>View a Source Code</i>&nbsp;{@link CSRFFilter}
+ * </p>
  * 
- * @author hitokiri
+ * 
+ * @author <a href="cesar.mata@yuxipacific.com">Cesar A Mata de Avila</a>
+ * @version %I%,%G%
  *
  */
 @Slf4j
@@ -39,7 +46,7 @@ import lombok.extern.slf4j.Slf4j;
 public class CSRFFilter extends OncePerRequestFilter {
 
     public static final String CROSS_SITE_REQUEST_FORGERY_TOKEN = "XSRF-TOKEN";
-
+    // containt the accout service instance.
     private final @NonNull AccountService accountService;
 
     /*

@@ -60,8 +60,8 @@ public class Application {
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
 	ReloadableResourceBundleMessageSource messageBundle = new ReloadableResourceBundleMessageSource();
-	messageBundle.setBasename(messageSourceBasename);
-	messageBundle.setDefaultEncoding(messageEncoding);
+	messageBundle.setBasename("classpath:messages/messages");
+	messageBundle.setDefaultEncoding("UTF-8");
 	return messageBundle;
     }
 
@@ -77,8 +77,7 @@ public class Application {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 	    registry.addViewController("/home").setViewName("home");
-	    registry.addViewController("/").setViewName("home");
-	    registry.addViewController("/hello").setViewName("hello");
+	    registry.addViewController("/").setViewName("login");
 	    registry.addViewController("/login").setViewName("login");
 	}
 
@@ -117,17 +116,20 @@ public class Application {
 	 */
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-	    httpSecurity.authorizeRequests().antMatchers("/", "/home")
-		    .permitAll().anyRequest().authenticated().and().csrf()
+	    httpSecurity.authorizeRequests()
+		    .antMatchers("/sessions/active/ticket/**").permitAll()
+		    .anyRequest().authenticated().and().csrf()
 		    .csrfTokenRepository(csrfTokenRepository()).and()
 		    .addFilterAfter(csrfFilter, CsrfFilter.class)
 		    .authenticationProvider(jpaAuthenticationProvider)
-		    .formLogin().loginPage("/login").permitAll()
-		    .successHandler(logiAnalyticSecurityKeyHandler)
+		    .formLogin().loginPage("/login").failureUrl("/login?error")
+		    .permitAll().successHandler(logiAnalyticSecurityKeyHandler)
 		    .successHandler(successForwarderHandler).and().logout()
 		    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-		    .logoutSuccessHandler(successLogoutHandler).permitAll();
-
+		    .invalidateHttpSession(true)
+		    .logoutSuccessHandler(successLogoutHandler)
+		    .logoutSuccessUrl("/login?logout").permitAll().and()
+		    .exceptionHandling().accessDeniedPage("/403");
 	}
 
 	/**

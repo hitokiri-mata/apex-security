@@ -3,6 +3,7 @@ package com.apex.web.security;
 public class Constants {
     //
     public static final String STRING_ENCRYPTED_STRING_NAME = "encryptedString";
+    public static final String SECURITY_TICKET_CACHE_NAME = "securityTicketCache";
     public static final String STRING_ENCRYPTOR_NAME = "hibernateStringEncryptor";
     public static final String ENCRIPTOR_REGISTER_PROPERTY_NAME = "encryptor"
 	    + "RegisteredName";

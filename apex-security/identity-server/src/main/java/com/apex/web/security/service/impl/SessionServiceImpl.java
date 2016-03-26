@@ -3,6 +3,7 @@ package com.apex.web.security.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,8 +51,13 @@ public class SessionServiceImpl implements SessionService {
      * String)
      */
     @Override
-    public Session getByTicket(String ticket) {
-	return sessionRepository.findByTicket(ticket);
+    public Session getActiveSessionByTicket(String ticket) {
+	Session session = sessionRepository
+		.findByTicketAndEndTimeIsNullAndAccountActiveTrue(ticket);
+	if (session == null) {
+	    throw new EntityNotFoundException();
+	}
+	return session;
     }
 
     /*
@@ -77,6 +83,17 @@ public class SessionServiceImpl implements SessionService {
     public Page<Session> getByPrincipal(String principal, Pageable pageable) {
 	return sessionRepository.findByAccountCredentialUsername(principal,
 		pageable);
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.apex.web.security.service.SessionService#getByTicket(java.lang.
+     * String)
+     */
+    @Override
+    public Session getByTicket(String ticket) {
+	return sessionRepository.findByTicket(ticket);
     }
 
     /*
